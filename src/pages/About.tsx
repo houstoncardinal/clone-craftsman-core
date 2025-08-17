@@ -118,7 +118,7 @@ const About = () => {
             </div>
             
             {/* Attorney Bio */}
-            <div className="order-1 lg:order-2 lg:-ml-24">
+            <div className="order-1 lg:order-2 text-center lg:text-left lg:-ml-24">
               <h3 className="text-2xl font-bold text-black mb-2">
                 Sanah Roopani
               </h3>
