@@ -17,7 +17,7 @@ const TaiNanXeTai = () => {
               Tai Nạn Xe Tải 18 Bánh
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Luật Sư Tai Nạn Xe Tải tại Houston, Texas
+              Luật Sư Bồi Thường Thiệt Hại Do Tai Nạn Xe Tải tại Houston, Texas
             </p>
           </div>
         </div>

@@ -17,7 +17,7 @@ const CaoBuocVuKhi = () => {
               Cáo Buộc Về Vũ Khí
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Luật Sư Vũ Khí tại Houston, Texas
+              Luật Sư Bào Chữa Tội Vũ Khí tại Houston, Texas
             </p>
           </div>
         </div>

@@ -17,7 +17,7 @@ const TuVongDoSaiSot = () => {
               Tử Vong Do Sai Sót
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Luật Sư Tử Vong Do Sai Sót tại Houston, Texas
+              Luật Sư Bồi Thường Thiệt Hại Do Tử Vong Sai Sót tại Houston, Texas
             </p>
           </div>
         </div>

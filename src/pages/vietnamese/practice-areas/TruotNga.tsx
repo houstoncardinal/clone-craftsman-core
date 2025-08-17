@@ -17,7 +17,7 @@ const TruotNga = () => {
               Trượt Ngã
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Luật Sư Trượt Ngã tại Houston, Texas
+              Luật Sư Bồi Thường Thiệt Hại Do Trượt Ngã tại Houston, Texas
             </p>
           </div>
         </div>

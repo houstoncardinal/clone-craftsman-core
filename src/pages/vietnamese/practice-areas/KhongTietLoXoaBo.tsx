@@ -17,7 +17,7 @@ const KhongTietLoXoaBo = () => {
               Không Tiết Lộ & Xóa Bỏ
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Luật Sư Xóa Bỏ Hồ Sơ Hình Sự tại Houston, Texas
+              Luật Sư Bào Chữa Tội & Xóa Bỏ Hồ Sơ Hình Sự tại Houston, Texas
             </p>
           </div>
         </div>

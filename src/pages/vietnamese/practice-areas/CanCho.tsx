@@ -17,7 +17,7 @@ const CanCho = () => {
               Cắn Chó
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Luật Sư Cắn Chó tại Houston, Texas
+              Luật Sư Bồi Thường Thiệt Hại Do Chó Cắn tại Houston, Texas
             </p>
           </div>
         </div>

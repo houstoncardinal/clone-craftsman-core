@@ -17,7 +17,7 @@ const TaiNanXeHoi = () => {
               Tai Nạn Xe Hơi
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Luật Sư Tai Nạn Xe Hơi tại Houston, Texas
+              Luật Sư Bồi Thường Thiệt Hại Do Tai Nạn Xe Hơi tại Houston, Texas
             </p>
           </div>
         </div>

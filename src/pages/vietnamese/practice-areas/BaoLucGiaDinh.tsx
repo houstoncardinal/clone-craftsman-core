@@ -17,7 +17,7 @@ const BaoLucGiaDinh = () => {
               Bạo Lực Gia Đình
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Luật Sư Bạo Lực Gia Đình tại Houston, Texas
+              Luật Sư Bào Chữa Tội Bạo Lực Gia Đình tại Houston, Texas
             </p>
           </div>
         </div>
