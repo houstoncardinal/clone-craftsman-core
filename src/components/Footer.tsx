@@ -8,8 +8,11 @@ const Footer = () => {
           {/* Logo and Working Hours */}
           <div>
             <div className="text-2xl font-bold text-law-gold mb-4">
-              <div className="w-12 h-12 border-2 border-law-gold rounded-full flex items-center justify-center mb-4">
-                SVR
+              <div className="w-16 h-16 border-2 border-law-gold rounded-full flex items-center justify-center text-lg mb-4">
+                <div className="text-center">
+                  <div className="text-xs leading-none">SVR</div>
+                  <div className="text-xs leading-none">LAW</div>
+                </div>
               </div>
             </div>
             <h4 className="font-semibold mb-4">Working Hours</h4>
@@ -56,11 +59,11 @@ const Footer = () => {
             </div>
             <div className="flex items-center space-x-4 text-sm">
               <div className="flex items-center space-x-2">
-                <img src="/lovable-uploads/0c8ae49c-b062-449f-8fb0-0f301a61d269.png" alt="US Flag" className="w-4 h-3" />
+                <span className="text-xs">🇺🇸</span>
                 <span>English</span>
               </div>
               <div className="flex items-center space-x-2">
-                <img src="/lovable-uploads/0c8ae49c-b062-449f-8fb0-0f301a61d269.png" alt="Spanish Flag" className="w-4 h-3" />
+                <span className="text-xs">🇪🇸</span>
                 <span>Español</span>
               </div>
             </div>

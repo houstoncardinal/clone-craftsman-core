@@ -14,10 +14,10 @@ const WelcomeSection = () => {
               Representation You Can Trust
             </h2>
             <div className="flex space-x-4">
-              <Button variant="default" className="bg-law-gold hover:bg-law-gold-dark text-white">
+              <Button className="bg-law-gold hover:bg-law-gold-dark text-white px-6 py-2">
                 ABOUT US
               </Button>
-              <Button variant="outline" className="border-law-gold text-law-gold hover:bg-law-gold hover:text-white">
+              <Button variant="outline" className="border-law-gold text-law-gold hover:bg-law-gold hover:text-white px-6 py-2">
                 PRACTICE AREAS
               </Button>
             </div>
@@ -25,6 +25,9 @@ const WelcomeSection = () => {
           <div className="text-foreground">
             <p className="mb-4">
               At SVR Law Firm, we focus on delivering superior legal strategies for personal injury actions and felony and misdemeanor criminal defense across the State of Texas. With years of trial experience and a commitment to achieving the best possible results, we live earned a reputation for excellence.
+            </p>
+            <p className="text-sm text-muted-foreground italic">
+              Please note that each individual case is unique and past results do not guarantee future outcomes.
             </p>
           </div>
         </div>
