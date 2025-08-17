@@ -36,8 +36,7 @@ const VietnameseHero = () => {
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight text-left tracking-tight">
-            Bạn không phải trả gì cho đến khi<br />
-            <span className="text-law-gold">chúng tôi thắng cho bạn.</span>
+            Bạn không phải trả gì cho đến khi <span className="text-law-gold">chúng tôi thắng cho bạn.</span>
           </h1>
 
           {/* Description paragraph */}

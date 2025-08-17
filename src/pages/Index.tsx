@@ -7,10 +7,16 @@ import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { SEOHead, SEOConfigs } from "@/components/SEOHead";
+import { LawFirmSchema } from "@/components/SchemaMarkup";
+import { HomepageFAQSchema } from "@/components/FAQSchema";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead {...SEOConfigs.home} />
+      <LawFirmSchema />
+      <HomepageFAQSchema />
       <Header />
       <Hero />
       <PracticeAreasOverview />

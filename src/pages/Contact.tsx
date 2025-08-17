@@ -1,14 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ContactForm } from "@/components/ContactForm";
+import { SEOHead, SEOConfigs } from "@/components/SEOHead";
+import { ContactPageSchema } from "@/components/SchemaMarkup";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-black">
+      <SEOHead {...SEOConfigs.contact} />
+      <ContactPageSchema />
       <Header />
       
       {/* Hero Section */}
@@ -30,70 +33,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold text-black mb-6">Send Us a Message</h2>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                    <Input 
-                      type="text" 
-                      placeholder="Your first name"
-                      className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                    <Input 
-                      type="text" 
-                      placeholder="Your last name"
-                      className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <Input 
-                    type="email" 
-                    placeholder="your.email@example.com"
-                    className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                  <Input 
-                    type="tel" 
-                    placeholder="(281) 249-9835"
-                    className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Practice Area</label>
-                  <select className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent">
-                    <option>Select a practice area</option>
-                    <option>Personal Injury - Car Accidents</option>
-                    <option>Personal Injury - 18-Wheeler Accidents</option>
-                    <option>Personal Injury - Slip and Fall</option>
-                    <option>Personal Injury - Wrongful Death</option>
-                    <option>Criminal Defense - DWI/DUI</option>
-                    <option>Criminal Defense - Drug Possession</option>
-                    <option>Criminal Defense - Domestic Violence</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <Textarea 
-                    placeholder="Tell us about your case..."
-                    rows={5}
-                    className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent"
-                  />
-                </div>
-                <Button className="w-full bg-law-gold hover:bg-law-gold-dark text-white py-3 text-lg font-semibold">
-                  Send Message
-                </Button>
-              </form>
-            </div>
+            <ContactForm language="en" />
 
             {/* Contact Information */}
             <div>
@@ -104,7 +44,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-black mb-2">Phone</h3>
                     <p className="text-gray-600">(281) 249-9835</p>
-                    <p className="text-sm text-gray-500">Available 24/7 for urgent matters</p>
+                    <p className="text-sm text-gray-500">Available for urgent matters</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -119,7 +59,7 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-law-gold mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-black mb-2">Office</h3>
-                    <p className="text-gray-600">2100 West Loop South Suite 1510</p>
+                    <p className="text-gray-600">2100 West Loop South Suite 1410</p>
                     <p className="text-gray-600">Houston, TX 77027</p>
                   </div>
                 </div>
@@ -128,22 +68,23 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-black mb-2">Office Hours</h3>
                     <p className="text-gray-600">Monday - Friday: 9 AM - 5 PM</p>
-                    <p className="text-gray-600">Saturday: 9 AM - 5 PM</p>
+                    <p className="text-gray-600">Saturday: Closed</p>
                     <p className="text-gray-600">Sunday: Closed</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 text-law-gold mt-1 flex-shrink-0 flex items-center justify-center">
+                    <span className="text-lg font-bold">⚖️</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-black mb-2">Attorney Information</h3>
+                    <p className="text-gray-600">Sanah Roopani</p>
+                    <p className="text-law-gold font-semibold">Texas Bar Card #24116990</p>
                   </div>
                 </div>
               </div>
 
-              {/* Emergency Contact */}
-              <div className="mt-8 p-6 bg-red-50 border border-red-200">
-                <h3 className="font-semibold text-red-800 mb-2">Emergency Legal Help</h3>
-                <p className="text-red-700 mb-4">
-                  If you're facing an urgent legal situation, call us immediately at (281) 249-9835. We're available 24/7 for emergency legal matters.
-                </p>
-                <Button className="bg-red-600 hover:bg-red-700 text-white">
-                  Call Now
-                </Button>
-              </div>
+
             </div>
           </div>
         </div>
@@ -156,8 +97,32 @@ const Contact = () => {
             <h2 className="text-3xl font-bold text-black mb-4">Visit Our Office</h2>
             <p className="text-gray-600">Located in the heart of Houston, Texas</p>
           </div>
-          <div className="bg-gray-300 h-64 flex items-center justify-center">
-            <p className="text-gray-600">Interactive Map Coming Soon</p>
+          <div className="max-w-6xl mx-auto">
+            <div className="relative overflow-hidden rounded-xl shadow-2xl border-4 border-law-gold/20">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4681.9409992016335!2d-95.4581196!3d29.7459615!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e925b06e982b%3A0x91549cda5cdc8e38!2sSVR%20Law!5e1!3m2!1sen!2sus!4v1755435050015!5m2!1sen!2sus"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="SVR Law Firm Location"
+                className="w-full"
+              ></iframe>
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/10 to-transparent"></div>
+            </div>
+            <div className="mt-6 text-center">
+              <a 
+                href="https://maps.app.goo.gl/CTcKGeaSFdNFLBBL7" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 text-law-gold hover:text-law-gold-dark font-semibold transition-colors duration-200"
+              >
+                <MapPin className="w-5 h-5" />
+                <span>Open in Google Maps</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

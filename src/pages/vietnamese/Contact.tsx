@@ -1,10 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ContactForm } from "@/components/ContactForm";
 
 const VietnameseContact = () => {
   return (
@@ -30,70 +29,7 @@ const VietnameseContact = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold text-black mb-6">Gửi Tin Nhắn Cho Chúng Tôi</h2>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Tên</label>
-                    <Input 
-                      type="text" 
-                      placeholder="Tên của bạn"
-                      className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Họ</label>
-                    <Input 
-                      type="text" 
-                      placeholder="Họ của bạn"
-                      className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <Input 
-                    type="email" 
-                    placeholder="email.cua.ban@example.com"
-                    className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Điện Thoại</label>
-                  <Input 
-                    type="tel" 
-                    placeholder="(281) 249-9835"
-                    className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Lĩnh Vực Thực Hành</label>
-                  <select className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent">
-                    <option>Chọn lĩnh vực thực hành</option>
-                    <option>Chấn Thương Cá Nhân - Tai Nạn Xe Hơi</option>
-                    <option>Chấn Thương Cá Nhân - Tai Nạn Xe Tải 18 Bánh</option>
-                    <option>Chấn Thương Cá Nhân - Trượt Ngã</option>
-                    <option>Chấn Thương Cá Nhân - Tử Vong Do Sai Sót</option>
-                    <option>Bào Chữa Hình Sự - Lái Xe Say Rượu</option>
-                    <option>Bào Chữa Hình Sự - Sở Hữu Ma Túy</option>
-                    <option>Bào Chữa Hình Sự - Bạo Lực Gia Đình</option>
-                    <option>Khác</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Tin Nhắn</label>
-                  <Textarea 
-                    placeholder="Hãy cho chúng tôi biết về vụ án của bạn..."
-                    rows={5}
-                    className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent"
-                  />
-                </div>
-                <Button className="w-full bg-law-gold hover:bg-law-gold-dark text-white py-3 text-lg font-semibold">
-                  Gửi Tin Nhắn
-                </Button>
-              </form>
-            </div>
+            <ContactForm language="vi" />
 
             {/* Contact Information */}
             <div>
@@ -104,7 +40,7 @@ const VietnameseContact = () => {
                   <div>
                     <h3 className="font-semibold text-black mb-2">Điện Thoại</h3>
                     <p className="text-gray-600">(281) 249-9835</p>
-                    <p className="text-sm text-gray-500">Có sẵn 24/7 cho các vấn đề khẩn cấp</p>
+                    <p className="text-sm text-gray-500">Có sẵn cho các vấn đề khẩn cấp</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -119,7 +55,7 @@ const VietnameseContact = () => {
                   <MapPin className="w-6 h-6 text-law-gold mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-black mb-2">Văn Phòng</h3>
-                    <p className="text-gray-600">2100 West Loop South Suite 1510</p>
+                    <p className="text-gray-600">2100 West Loop South Suite 1410</p>
                     <p className="text-gray-600">Houston, TX 77027</p>
                   </div>
                 </div>
@@ -128,22 +64,23 @@ const VietnameseContact = () => {
                   <div>
                     <h3 className="font-semibold text-black mb-2">Giờ Làm Việc</h3>
                     <p className="text-gray-600">Thứ Hai - Thứ Sáu: 9:00 - 17:00</p>
-                    <p className="text-gray-600">Thứ Bảy: 9:00 - 17:00</p>
+                    <p className="text-gray-600">Thứ Bảy: Đóng cửa</p>
                     <p className="text-gray-600">Chủ Nhật: Đóng cửa</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 text-law-gold mt-1 flex-shrink-0 flex items-center justify-center">
+                    <span className="text-lg font-bold">⚖️</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-black mb-2">Thông Tin Luật Sư</h3>
+                    <p className="text-gray-600">Sanah Roopani</p>
+                    <p className="text-law-gold font-semibold">Texas Bar Card #24116990</p>
                   </div>
                 </div>
               </div>
 
-              {/* Emergency Contact */}
-              <div className="mt-8 p-6 bg-red-50 border border-red-200">
-                <h3 className="font-semibold text-red-800 mb-2">Hỗ Trợ Pháp Lý Khẩn Cấp</h3>
-                <p className="text-red-700 mb-4">
-                  Nếu bạn đang đối mặt với tình huống pháp lý khẩn cấp, hãy gọi cho chúng tôi ngay lập tức tại (281) 249-9835. Chúng tôi có sẵn 24/7 cho các vấn đề pháp lý khẩn cấp.
-                </p>
-                <Button className="bg-red-600 hover:bg-red-700 text-white">
-                  Gọi Ngay
-                </Button>
-              </div>
+
             </div>
           </div>
         </div>
@@ -156,8 +93,32 @@ const VietnameseContact = () => {
             <h2 className="text-3xl font-bold text-black mb-4">Thăm Văn Phòng Của Chúng Tôi</h2>
             <p className="text-gray-600">Tọa lạc tại trung tâm Houston, Texas</p>
           </div>
-          <div className="bg-gray-300 h-64 flex items-center justify-center">
-            <p className="text-gray-600">Bản Đồ Tương Tác Sắp Có</p>
+          <div className="max-w-6xl mx-auto">
+            <div className="relative overflow-hidden rounded-xl shadow-2xl border-4 border-law-gold/20">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4681.9409992016335!2d-95.4581196!3d29.7459615!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e925b06e982b%3A0x91549cda5cdc8e38!2sSVR%20Law!5e1!3m2!1sen!2sus!4v1755435050015!5m2!1sen!2sus"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="SVR Law Firm Location"
+                className="w-full"
+              ></iframe>
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/10 to-transparent"></div>
+            </div>
+            <div className="mt-6 text-center">
+              <a 
+                href="https://maps.app.goo.gl/CTcKGeaSFdNFLBBL7" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 text-law-gold hover:text-law-gold-dark font-semibold transition-colors duration-200"
+              >
+                <MapPin className="w-5 h-5" />
+                <span>Mở trong Google Maps</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

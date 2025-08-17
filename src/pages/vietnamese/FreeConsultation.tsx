@@ -29,7 +29,7 @@ const VietnameseFreeConsultation = () => {
                 </Button>
               </a>
               <Link to="/vietnamese/lien-he">
-                <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-law-gold px-8 py-4 text-lg font-semibold shadow-lg">
+                <Button variant="outline" className="border-2 border-white bg-white text-black hover:bg-law-gold hover:text-white px-8 py-4 text-lg font-semibold shadow-lg">
                   Gửi Tin Nhắn
                 </Button>
               </Link>
@@ -96,7 +96,7 @@ const VietnameseFreeConsultation = () => {
                   <div className="flex items-center space-x-3">
                     <input type="checkbox" id="agree" className="w-5 h-5 text-law-gold focus:ring-law-gold" />
                     <label htmlFor="agree" className="text-sm text-gray-600">
-                      Tôi đồng ý rằng dữ liệu của tôi được thu thập và lưu trữ.
+                      Tôi đồng ý cho SVR Law Firm liên hệ với tôi qua các phương thức liên lạc đã cung cấp trong biểu mẫu này.
                     </label>
                   </div>
                   <Button className="w-full bg-law-gold hover:bg-law-gold-dark text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
@@ -120,7 +120,7 @@ const VietnameseFreeConsultation = () => {
                     <MapPin className="w-6 h-6 text-law-gold mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-black mb-1">Địa chỉ:</h4>
-                      <p className="text-gray-600">2100 West Loop South Suite 1510 Houston, TX 77027</p>
+                      <p className="text-gray-600">2100 West Loop South Suite 1410 Houston, TX 77027</p>
                     </div>
                   </div>
                   

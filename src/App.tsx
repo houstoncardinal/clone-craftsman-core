@@ -1,10 +1,13 @@
+import React, { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { TranslationProvider } from "./contexts/TranslationContext";
 import ScrollToTop from "./components/ScrollToTop";
+import { preloadCriticalImages } from "./components/ImageOptimizer";
 import Index from "./pages/Index";
 import PracticeAreas from "./pages/PracticeAreas";
 import About from "./pages/About";
@@ -50,14 +53,19 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
+  // Preload critical images on app start
+  useEffect(() => {
+    preloadCriticalImages();
+  }, []);
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <TranslationProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <ScrollToTop />
+      <HelmetProvider>
+        <TooltipProvider>
+          <TranslationProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <ScrollToTop />
             <Routes>
           {/* English Routes */}
           <Route path="/" element={<Index />} />
@@ -121,6 +129,7 @@ const App = () => {
       </BrowserRouter>
         </TranslationProvider>
     </TooltipProvider>
+        </HelmetProvider>
   </QueryClientProvider>
   );
 };

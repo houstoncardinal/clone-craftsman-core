@@ -29,7 +29,7 @@ const WelcomeSection = () => {
                 </Button>
               </Link>
               <Link to="/practice-areas">
-                <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white px-6 py-3 font-semibold">
+                <Button className="bg-gray-100 hover:bg-gray-200 text-black px-6 py-3 font-semibold">
                   PRACTICE AREAS
                 </Button>
               </Link>

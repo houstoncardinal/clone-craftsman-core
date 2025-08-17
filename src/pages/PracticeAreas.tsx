@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ArrowRight, Shield, Scale, Users, Heart, Car, Truck, User, Dog } from "lucide-react";
+import { SEOHead, SEOConfigs } from "@/components/SEOHead";
+import { LawFirmSchema } from "@/components/SchemaMarkup";
+import slipFallImage from "@/assets/slip-fall.jpg";
 
 const PracticeAreas = () => {
   const [hoveredPersonalInjury, setHoveredPersonalInjury] = useState<string | null>("Car Accidents");
@@ -12,35 +15,35 @@ const PracticeAreas = () => {
   const personalInjuryAreas = [
     {
       name: "Car Accidents",
-      image: "/practice-areas-car-accidents.jpg",
+      image: "/caraccident.jpg",
       description: "Protecting your rights",
       link: "/practice-areas/car-accidents",
       icon: Car
     },
     {
       name: "18-Wheeler Accidents",
-      image: "/practice-areas-truck-accidents.jpg",
+      image: "/18wheeler.png",
       description: "Complex truck accident cases",
       link: "/practice-areas/truck-accidents",
       icon: Truck
     },
     {
       name: "Slip and Fall",
-      image: "/practice-areas-slip-fall.jpg",
+      image: slipFallImage,
       description: "Premises liability claims",
       link: "/practice-areas/slip-fall",
       icon: User
     },
     {
       name: "Wrongful Death",
-      image: "/practice-areas-wrongful-death.jpg",
+      image: "/wrongfuldeath.jpg",
       description: "Seeking justice for families",
       link: "/practice-areas/wrongful-death",
       icon: Heart
     },
     {
       name: "Catastrophic Injury",
-      image: "/practice-areas-catastrophic-injury.jpg",
+      image: "/catastrophic.jpg",
       description: "Fighting for severe injury victims",
       link: "/practice-areas/catastrophic-injury",
       icon: Shield
@@ -57,21 +60,21 @@ const PracticeAreas = () => {
   const criminalDefenseAreas = [
     {
       name: "DWI/DUI",
-      image: "/practice-areas-dwi-dui.jpg",
+      image: "/dui.png",
       description: "Criminal defense expertise",
       link: "/practice-areas/dwi-dui",
       icon: Car
     },
     {
       name: "Drug Possession",
-      image: "/practice-areas-drug-possession.jpg",
+      image: "/drugpossession.png",
       description: "Strategic defense strategies",
       link: "/practice-areas/drug-possession",
       icon: Shield
     },
     {
       name: "Weapon Cases",
-      image: "/practice-areas-weapon-cases.jpg",
+      image: "/weaponcharges.jpg",
       description: "Defending weapon possession charges",
       link: "/practice-areas/weapon-cases",
       icon: Shield
@@ -85,7 +88,7 @@ const PracticeAreas = () => {
     },
     {
       name: "Domestic Violence",
-      image: "/practice-areas-domestic-violence.jpg",
+      image: "/domestic.jpg",
       description: "Protecting your future",
       link: "/practice-areas/domestic-violence",
       icon: Heart
@@ -149,8 +152,8 @@ const PracticeAreas = () => {
           className="relative w-full bg-cover bg-center bg-no-repeat transition-all duration-700 shadow-2xl"
           style={{ 
             backgroundImage: hoveredService 
-              ? `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${areas.find(area => area.name === hoveredService)?.image})`
-              : `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${areas.find(area => area.name === defaultService)?.image})`
+              ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${areas.find(area => area.name === hoveredService)?.image})`
+              : `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${areas.find(area => area.name === defaultService)?.image})`
           }}
         >
           {/* Mobile: Single column, full width, vertical stacking */}
@@ -222,6 +225,8 @@ const PracticeAreas = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead {...SEOConfigs.practiceAreas} />
+      <LawFirmSchema />
       <Header />
       
       {/* Hero Section */}

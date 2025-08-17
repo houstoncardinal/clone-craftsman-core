@@ -2,11 +2,44 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PracticeAreasGrid from "@/components/PracticeAreasGrid";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronDown, Plus, Phone } from "lucide-react";
+import { ArrowRight, ChevronDown, Plus, Minus, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import heroBackground from "@/assets/hero-background.jpg";
+import { SEOHead } from "@/components/SEOHead";
+import { LawFirmSchema } from "@/components/SchemaMarkup";
+import { VietnameseFAQSchema } from "@/components/FAQSchema";
 
 const VietnameseIndex = () => {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(0);
+
+  const faqData = [
+    {
+      question: "Tôi nên làm gì ngay lập tức sau một vụ tai nạn ô tô?",
+      answer: "Liên hệ với một luật sư về tai nạn cá nhân ngay khi có thể để bảo vệ quyền lợi của bạn. Tránh phát biểu với các công ty bảo hiểm cho đến khi bạn đã nói chuyện với một luật sư. Ghi lại mọi thứ, chụp ảnh, và tìm kiếm sự chăm sóc y tế nếu cần thiết."
+    },
+    {
+      question: "Làm thế nào để tôi biết mình có vụ kiện chấn thương cá nhân không?",
+      answer: "Nếu bạn bị thương do sự bất cẩn của người khác, bạn có thể có vụ kiện. Liên hệ với chúng tôi để được tư vấn miễn phí, và chúng tôi sẽ đánh giá chi tiết tình huống của bạn. Chúng tôi sẽ giúp bạn hiểu các lựa chọn pháp lý và khoản bồi thường tiềm năng."
+    },
+    {
+      question: "Chi phí để thuê một luật sư cho vụ kiện về tai nạn cá nhân hoặc biện hộ hình sự là bao nhiêu?",
+      answer: "Đối với các vụ kiện về tai nạn cá nhân, chúng tôi làm việc theo cơ sở phí hoa hồng, có nghĩa là bạn không phải trả tiền trừ khi chúng tôi thắng. Đối với biện hộ hình sự, chi phí khác nhau tùy thuộc vào độ phức tạp của vụ án, nhưng chúng tôi cung cấp các kế hoạch thanh toán linh hoạt và một buổi tư vấn ban đầu miễn phí."
+    },
+    {
+      question: "Tôi có bao nhiêu thời gian để nộp đơn kiện về tai nạn cá nhân?",
+      answer: "Tại Texas, bạn thường có 2 năm từ ngày bị thương để nộp đơn kiện về tai nạn cá nhân. Tuy nhiên, điều quan trọng là phải hành động nhanh chóng vì bằng chứng có thể bị mất và ký ức của nhân chứng có thể phai mờ. Liên hệ với chúng tôi ngay lập tức để bảo vệ quyền lợi của bạn."
+    },
+    {
+      question: "Tôi có thể đòi bồi thường những gì?",
+      answer: "Bạn có thể được quyền bồi thường cho chi phí y tế, mất lương, đau đớn và khổ sở, thiệt hại tài sản, và nhiều hơn nữa. Các thiệt hại cụ thể phụ thuộc vào vụ án của bạn. Chúng tôi sẽ chiến đấu để tối đa hóa việc phục hồi của bạn."
+    }
+  ];
+
+  const toggleFAQ = (index: number) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
+
   const scrollToNextSection = () => {
     const nextSection = document.querySelector('#practice-areas-overview');
     if (nextSection) {
@@ -16,6 +49,15 @@ const VietnameseIndex = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Văn Phòng Luật SVR - Luật Sư Chấn Thương Cá Nhân & Bào Chữa Hình Sự Houston | Tư Vấn Miễn Phí"
+        description="Văn Phòng Luật SVR tại Houston, TX cung cấp dịch vụ pháp lý chuyên nghiệp cho chấn thương cá nhân và bào chữa hình sự. Tai nạn xe hơi, DWI, bạo lực gia đình, tử vong do sai sót. Tư vấn miễn phí. Gọi (281) 249-9835."
+        keywords="luật sư chấn thương cá nhân Houston, luật sư bào chữa hình sự Houston, luật sư tai nạn xe hơi, luật sư DWI Houston, luật sư bạo lực gia đình, luật sư tử vong do sai sót, văn phòng luật Houston, tư vấn pháp lý miễn phí"
+        canonical="https://svrlawfirm.com/vietnamese"
+        language="vi"
+      />
+      <LawFirmSchema />
+      <VietnameseFAQSchema />
       <Header />
       
       {/* Hero Section - Exact match to English */}
@@ -137,7 +179,7 @@ const VietnameseIndex = () => {
                   </Button>
                 </Link>
                 <Link to="/vietnamese/linh-vuc-thuc-hanh">
-                  <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white px-6 py-3 font-semibold">
+                  <Button className="bg-gray-100 hover:bg-gray-200 text-black px-6 py-3 font-semibold">
                     LĨNH VỰC HÀNH NGHỀ
                   </Button>
                 </Link>
@@ -154,71 +196,78 @@ const VietnameseIndex = () => {
       <PracticeAreasGrid />
 
       {/* FAQ Section - Simplified full width */}
-      <section className="py-20 bg-black">
+      <section className="py-24 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* Left Content - FAQs */}
-            <div>
-              <p className="text-sm font-semibold text-gray-400 mb-4 tracking-wider">
-                CÂU HỎI THƯỜNG GẶP
-              </p>
-              <h2 className="text-4xl font-bold text-white mb-12 leading-tight">
-                Có câu hỏi?<br />
-                Chúng tôi có câu trả lời!
+            {/* Header */}
+            <div className="text-center mb-16">
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Câu Hỏi Thường Gặp
               </h2>
-              <div className="space-y-6">
-                <div className="border-b border-gray-700 pb-6">
-                  <div className="flex items-center justify-between cursor-pointer py-2 group">
-                    <span className="text-white text-lg group-hover:text-law-gold transition-colors">
-                      <Plus className="w-5 h-5 inline mr-2" />
-                      Q: Tôi nên làm gì ngay lập tức sau một vụ tai nạn ô tô?
-                    </span>
-                  </div>
-                  <div className="mt-2 text-gray-300">
-                    A: Liên hệ với một luật sư về tai nạn cá nhân ngay khi có thể để bảo vệ quyền lợi của bạn. Tránh phát biểu với các công ty bảo hiểm cho đến khi bạn đã nói chuyện với một luật sư.
+              <div className="w-24 h-1 bg-law-gold mx-auto"></div>
+            </div>
+
+            {/* FAQs */}
+            <div className="space-y-4 mb-16">
+              {faqData.map((faq, index) => (
+                <div 
+                  key={index}
+                  className="border border-gray-800 rounded-lg overflow-hidden"
+                >
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-900 transition-colors duration-200"
+                  >
+                    <h3 className="text-xl font-semibold text-white pr-4">
+                      {faq.question}
+                    </h3>
+                    <div className="flex-shrink-0">
+                      {openFAQ === index ? (
+                        <Minus className="w-5 h-5 text-law-gold" />
+                      ) : (
+                        <Plus className="w-5 h-5 text-gray-400" />
+                      )}
+                    </div>
+                  </button>
+                  <div 
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      openFAQ === index ? 'max-h-96' : 'max-h-0'
+                    }`}
+                  >
+                    <div className="px-8 pb-6">
+                      <p className="text-gray-300 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="border-b border-gray-700 pb-6">
-                  <div className="flex items-center justify-between cursor-pointer py-2 group">
-                    <span className="text-white text-lg group-hover:text-law-gold transition-colors">
-                      <Plus className="w-5 h-5 inline mr-2" />
-                      Q: Làm thế nào để tôi biết nếu tôi có một vụ kiện về tai nạn cá nhân?
-                    </span>
-                  </div>
-                  <div className="mt-2 text-gray-300">
-                    A: Nếu bạn bị thương do sự bất cẩn của người khác, bạn có thể có một vụ kiện. Liên hệ với chúng tôi để được tư vấn miễn phí, và chúng tôi sẽ đánh giá chi tiết về tình huống của bạn.
-                  </div>
-                </div>
-                <div className="border-b border-gray-700 pb-6">
-                  <div className="flex items-center justify-between cursor-pointer py-2 group">
-                    <span className="text-white text-lg group-hover:text-law-gold transition-colors">
-                      <Plus className="w-5 h-5 inline mr-2" />
-                      Q: Chi phí để thuê một luật sư cho vụ kiện về tai nạn cá nhân hoặc biện hộ hình sự là bao nhiêu?
-                    </span>
-                  </div>
-                  <div className="mt-2 text-gray-300">
-                    A: Đối với các vụ kiện về tai nạn cá nhân, chúng tôi làm việc theo cơ sở phí hoa hồng, có nghĩa là bạn không phải trả tiền trừ khi chúng tôi thắng. Đối với biện hộ hình sự, chi phí khác nhau tùy thuộc vào độ phức tạp của vụ án, nhưng chúng tôi cung cấp các kế hoạch thanh toán linh hoạt và một buổi tư vấn ban đầu miễn phí.
-                  </div>
-                </div>
-              </div>
-              <div className="mt-8">
-                <a href="tel:281-249-9835" className="text-white hover:text-law-gold transition-colors underline">
-                  Gọi Văn phòng Luật SVR để có câu trả lời chi tiết cho câu hỏi của bạn!
-                </a>
-              </div>
+              ))}
             </div>
 
             {/* Call to Action */}
-            <div className="mt-12 flex justify-center">
-              <Link to="/vietnamese/len-lich-tu-van-mien-phi">
-                <Button 
-                  size="lg"
-                  className="bg-law-gold hover:bg-law-gold-dark text-white px-10 py-8 text-xl font-bold text-center leading-tight shadow-lg hover:shadow-xl transition-all duration-300"
+            <div className="text-center">
+              <h3 className="text-3xl font-bold text-white mb-6">
+                Sẵn Sàng Bắt Đầu?
+              </h3>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="tel:281-249-9835"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-law-gold hover:bg-law-gold-dark text-white font-semibold rounded-lg transition-colors duration-200"
                 >
-                  Nhận Đánh Giá<br />
-                  Vụ Án Miễn Phí
-                </Button>
-              </Link>
+                  <Phone className="w-5 h-5 mr-2" />
+                  Gọi (281) 249-9835
+                </a>
+                <Link 
+                  to="/vietnamese/len-lich-tu-van-mien-phi"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-100 text-black font-semibold rounded-lg transition-colors duration-200"
+                >
+                  <ArrowRight className="w-5 h-5 mr-2" />
+                  Tư Vấn Miễn Phí
+                </Link>
+              </div>
+              <p className="text-gray-400 text-sm mt-4">
+                Không phí trừ khi chúng tôi thắng
+              </p>
             </div>
           </div>
         </div>
@@ -235,7 +284,7 @@ const VietnameseIndex = () => {
                 Nếu bạn có câu hỏi hoặc lo ngại về vụ án của mình, vui lòng gọi cho chúng tôi trực tiếp. Các luật sư có kinh nghiệm của chúng tôi ở đây để giúp bạn hiểu các lựa chọn pháp lý của mình và cung cấp sự hướng dẫn mà bạn cần.
               </p>
               <a href="tel:281-249-9835">
-                <Button className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-4 text-lg font-semibold transition-all duration-300">
+                <Button className="bg-law-gold hover:bg-law-gold-dark text-white px-8 py-4 text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
                   GỌI (281) 249-9835
                 </Button>
               </a>
@@ -249,7 +298,7 @@ const VietnameseIndex = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/vietnamese/lien-he">
-                  <Button variant="outline" className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-4 text-lg font-semibold transition-all duration-300">
+                  <Button className="bg-gray-100 hover:bg-gray-200 text-black px-8 py-4 text-lg font-semibold transition-all duration-300">
                     GỬI TIN NHẮN CHO CHÚNG TÔI
                   </Button>
                 </Link>

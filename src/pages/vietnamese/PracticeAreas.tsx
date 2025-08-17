@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ArrowRight, Shield, Scale, Users, Heart, Car, Truck, User, Dog } from "lucide-react";
+import slipFallImage from "@/assets/slip-fall.jpg";
 
 const VietnamesePracticeAreas = () => {
   const [hoveredPersonalInjury, setHoveredPersonalInjury] = useState<string | null>("Tai Nạn Xe Hơi");
@@ -12,35 +13,35 @@ const VietnamesePracticeAreas = () => {
   const personalInjuryAreas = [
     {
       name: "Tai Nạn Xe Hơi",
-      image: "/practice-areas-car-accidents.jpg",
+      image: "/caraccident.jpg",
       description: "Bảo vệ quyền lợi của bạn",
       link: "/vietnamese/linh-vuc-thuc-hanh/tai-nan-xe-hoi",
       icon: Car
     },
     {
       name: "Tai nạn xe tải 18 bánh",
-      image: "/practice-areas-truck-accidents.jpg",
+      image: "/18wheeler.png",
       description: "Vụ án tai nạn xe tải phức tạp",
       link: "/vietnamese/linh-vuc-thuc-hanh/tai-nan-xe-tai",
       icon: Truck
     },
     {
       name: "Trượt Ngã",
-      image: "/practice-areas-slip-fall.jpg",
+      image: slipFallImage,
       description: "Khiếu nại trách nhiệm cơ sở",
       link: "/vietnamese/linh-vuc-thuc-hanh/truot-nga",
       icon: User
     },
     {
       name: "Tử vong do sai sót",
-      image: "/practice-areas-wrongful-death.jpg",
+      image: "/wrongfuldeath.jpg",
       description: "Tìm kiếm công lý cho gia đình",
       link: "/vietnamese/linh-vuc-thuc-hanh/tu-vong-do-sai-sot",
       icon: Heart
     },
     {
       name: "Chấn Thương Thảm Khốc",
-      image: "/practice-areas-catastrophic-injury.jpg",
+      image: "/catastrophic.jpg",
       description: "Đấu tranh cho nạn nhân chấn thương nghiêm trọng",
       link: "/vietnamese/linh-vuc-thuc-hanh/chan-thuong-tham-khoc",
       icon: Shield
@@ -57,21 +58,21 @@ const VietnamesePracticeAreas = () => {
   const criminalDefenseAreas = [
     {
       name: "Lái xe trong tình trạng say rượu",
-      image: "/practice-areas-dwi-dui.jpg",
+      image: "/dui.png",
       description: "Chuyên môn bào chữa hình sự",
       link: "/vietnamese/linh-vuc-thuc-hanh/lai-xe-say-ruou",
       icon: Car
     },
     {
       name: "Sở hữu ma túy",
-      image: "/practice-areas-drug-possession.jpg",
+      image: "/drugpossession.png",
       description: "Chiến lược bào chữa chiến lược",
       link: "/vietnamese/linh-vuc-thuc-hanh/so-huu-ma-tuy",
       icon: Shield
     },
     {
       name: "Cáo Buộc Về Vũ Khí",
-      image: "/practice-areas-weapon-cases.jpg",
+      image: "/weaponcharges.jpg",
       description: "Bào chữa cáo buộc sở hữu vũ khí",
       link: "/vietnamese/linh-vuc-thuc-hanh/cao-buoc-vu-khi",
       icon: Shield
@@ -85,7 +86,7 @@ const VietnamesePracticeAreas = () => {
     },
     {
       name: "Bạo lực gia đình",
-      image: "/practice-areas-domestic-violence.jpg",
+      image: "/domestic.jpg",
       description: "Bảo vệ tương lai của bạn",
       link: "/vietnamese/linh-vuc-thuc-hanh/bao-luc-gia-dinh",
       icon: Heart
@@ -149,8 +150,8 @@ const VietnamesePracticeAreas = () => {
           className="relative w-full bg-cover bg-center bg-no-repeat transition-all duration-700 shadow-2xl"
           style={{ 
             backgroundImage: hoveredService 
-              ? `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${areas.find(area => area.name === hoveredService)?.image})`
-              : `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${areas.find(area => area.name === defaultService)?.image})`
+              ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${areas.find(area => area.name === hoveredService)?.image})`
+              : `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${areas.find(area => area.name === defaultService)?.image})`
           }}
         >
           {/* Mobile: Single column, full width, vertical stacking */}

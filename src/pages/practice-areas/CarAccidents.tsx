@@ -3,10 +3,17 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Car, Shield, Users, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead, SEOConfigs } from "@/components/SEOHead";
+import { PracticeAreaSchema } from "@/components/SchemaMarkup";
 
 const CarAccidents = () => {
   return (
     <div className="min-h-screen bg-black">
+      <SEOHead {...SEOConfigs.carAccidents} />
+      <PracticeAreaSchema 
+        practiceArea="Car Accident"
+        description="Expert car accident lawyers in Houston. SVR Law Firm helps victims get maximum compensation for injuries, medical bills, and lost wages. Free consultation. No fee unless we win."
+      />
       <Header />
       
       {/* Hero Section */}

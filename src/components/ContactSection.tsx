@@ -13,7 +13,7 @@ const ContactSection = () => {
                               If you have questions or concerns about your case, please call us directly. Our experienced attorney is here to help you understand your legal options and provide the guidance you need.
             </p>
             <a href="tel:281-249-9835">
-              <Button className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-4 text-lg font-semibold transition-all duration-300">
+              <Button className="bg-law-gold hover:bg-law-gold-dark text-white px-8 py-4 text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
                 CALL (281) 249-9835
               </Button>
             </a>
@@ -27,12 +27,12 @@ const ContactSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
-                <Button variant="outline" className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-4 text-lg font-semibold transition-all duration-300">
+                <Button className="bg-gray-100 hover:bg-gray-200 text-black px-8 py-4 text-lg font-semibold transition-all duration-300">
                   SEND US A MESSAGE
                 </Button>
               </Link>
               <Link to="/free-consultation">
-                <Button className="bg-law-gold hover:bg-law-gold-dark text-white px-8 py-4 text-lg font-semibold transition-all duration-300">
+                <Button className="bg-law-gold hover:bg-law-gold-dark text-white px-8 py-4 text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
                   FREE CONSULTATION
                 </Button>
               </Link>

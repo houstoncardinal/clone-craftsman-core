@@ -5,10 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle, Clock, Shield, Phone, Mail, MapPin, Star, Award, Gavel, ArrowRight, Plus } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead, SEOConfigs } from "@/components/SEOHead";
+import { LawFirmSchema } from "@/components/SchemaMarkup";
 
 const FreeConsultation = () => {
   return (
     <div className="min-h-screen bg-black">
+      <SEOHead {...SEOConfigs.freeConsultation} />
+      <LawFirmSchema />
       <Header />
       
       {/* Hero Section */}
@@ -29,7 +33,7 @@ const FreeConsultation = () => {
                 </Button>
               </a>
               <Link to="/contact">
-                <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-law-gold px-8 py-4 text-lg font-semibold shadow-lg">
+                <Button variant="outline" className="border-2 border-white bg-white text-black hover:bg-law-gold hover:text-white px-8 py-4 text-lg font-semibold shadow-lg">
                   Send Message
                 </Button>
               </Link>
@@ -96,7 +100,7 @@ const FreeConsultation = () => {
                   <div className="flex items-center space-x-3">
                     <input type="checkbox" id="agree" className="w-5 h-5 text-law-gold focus:ring-law-gold" />
                     <label htmlFor="agree" className="text-sm text-gray-600">
-                      I agree that my data is collected and stored.
+                      I agree for SVR Law Firm to contact me at the provided contact methods in my form submission.
                     </label>
                   </div>
                   <Button className="w-full bg-law-gold hover:bg-law-gold-dark text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
@@ -120,7 +124,7 @@ const FreeConsultation = () => {
                     <MapPin className="w-6 h-6 text-law-gold mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-black mb-1">Address:</h4>
-                      <p className="text-gray-600">2100 West Loop South Suite 1510 Houston, TX 77027</p>
+                      <p className="text-gray-600">2100 West Loop South Suite 1410 Houston, TX 77027</p>
                     </div>
                   </div>
                   

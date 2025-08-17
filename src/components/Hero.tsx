@@ -36,8 +36,7 @@ const Hero = () => {
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight text-left tracking-tight">
-            You pay nothing until we<br />
-            <span className="text-law-gold">win for you.</span>
+            You pay nothing until we <span className="text-law-gold">win for you.</span>
           </h1>
 
           {/* Description paragraph */}
