@@ -14,7 +14,6 @@ const Footer = () => {
               <p>Houston, TX 77027</p>
               <p className="mt-4">info@svrlawfirm.com</p>
               <p className="mt-4">Office: 281-249-9835</p>
-              <p>Fax: 832-346-3442</p>
             </div>
           </div>
 
