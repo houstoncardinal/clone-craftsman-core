@@ -118,17 +118,17 @@ const About = () => {
             </div>
             
             {/* Attorney Bio */}
-            <div className="order-1 lg:order-2 text-center lg:text-left lg:-ml-24 px-4 lg:px-0">
-              <h3 className="text-2xl font-bold text-black mb-2 text-center lg:text-left">
+            <div className="order-1 lg:order-2 text-left lg:-ml-24 px-4 lg:px-0">
+              <h3 className="text-2xl font-bold text-black mb-2 text-left">
                 Sanah Roopani
               </h3>
-              <p className="text-lg text-law-gold font-semibold mb-4 text-center lg:text-left">
+              <p className="text-lg text-law-gold font-semibold mb-4 text-left">
                 Texas Bar Card #24116990
               </p>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed text-center lg:text-left">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed text-left">
                 Sanah Roopani proudly graduated from the University of Texas and the University of Houston Law Center, where she discovered her passion for client advocacy in the courtroom. During law school, Sanah served as a judicial intern for the Honorable Jeff Bohm of the United States Bankruptcy Court for the Southern District of Texas. She also gained valuable experience working with a personal injury firm and interning at the Harris County District Attorney's Office. Her passion for litigation was further solidified when she observed a trial for Continuous Sexual Assault with a local criminal defense firm.
               </p>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed text-center lg:text-left">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed text-left">
                 To deepen her courtroom experience, Sanah worked at the Fort Bend County District Attorney's Office after graduating from law school. As a prosecutor, she managed a caseload of 200 to 250 cases at a time, acquiring essential courtroom skills. Her prior experiences have provided her with valuable insights into the fundamentals of the criminal justice system, and she is committed to advocating tirelessly for her clients.
               </p>
               
