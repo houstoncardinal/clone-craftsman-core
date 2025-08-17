@@ -17,7 +17,7 @@ const TanCong = () => {
               Tấn Công
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Luật Sư Tấn Công tại Houston, Texas
+              Luật Sư Bào Chữa Tội Tấn Công tại Houston, Texas
             </p>
           </div>
         </div>
