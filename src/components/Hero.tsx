@@ -1,47 +1,72 @@
 import { Button } from "@/components/ui/button";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
+  const scrollToNextSection = () => {
+    const nextSection = document.querySelector('#practice-areas-overview');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section 
-      className="relative min-h-[600px] flex items-center justify-center bg-cover bg-center bg-no-repeat"
+      className="relative py-20 md:py-32 flex items-center bg-cover bg-center bg-no-repeat bg-fixed"
       style={{ backgroundImage: `url(${heroBackground})` }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/70" />
+      {/* Professional gradient overlay - darker on left where content is */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/40" />
       
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <h1 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
-          You pay nothing until we<br />
-          win for you.
-        </h1>
+      {/* Subtle pattern overlay */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }} />
       </div>
       
-      {/* Practice area cards at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-4 transform translate-y-1/2">
-            <div className="bg-card-dark p-6 text-card-dark-foreground">
-              <h3 className="text-xl font-bold mb-2">Personal Injury Law</h3>
-              <p className="text-sm opacity-90 mb-4">
-                If you have been injured in an accident resulting from someone's negligence or intentional act, we can help you recover your damages including medical expenses, lost wages, pain and suffering, and more.
-              </p>
-              <div className="flex justify-end">
-                <span className="text-law-gold">→</span>
-              </div>
-            </div>
-            <div className="bg-card-dark p-6 text-card-dark-foreground">
-              <h3 className="text-xl font-bold mb-2">Criminal Defense Law</h3>
-              <p className="text-sm opacity-90 mb-4">
-                If you have been charged with or are under investigation for a crime, don't speak to police without an attorney present. Call us at (214) 291-4815. We can help with all types of criminal defense cases.
-              </p>
-              <div className="flex justify-end">
-                <span className="text-law-gold">→</span>
-              </div>
-            </div>
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="max-w-4xl">
+          {/* Subtitle */}
+          <p className="text-sm font-semibold text-gray-300 mb-4 tracking-wider uppercase">
+            YOUR TRUSTED TEXAS TRIAL LAWYERS
+          </p>
+
+          {/* Main headline */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight text-left tracking-tight">
+            You pay nothing until we<br />
+            <span className="text-law-gold">win for you.</span>
+          </h1>
+
+          {/* Description paragraph */}
+          <p className="text-lg md:text-xl text-white mb-8 max-w-3xl leading-relaxed">
+            Experience peace of mind with our 'No Win, No Fee' guarantee. At SVR Law Firm we fight tirelessly for your rights, and you only pay if we secure the compensation you deserve. Contact us today for a risk-free case evaluation!
+          </p>
+
+          {/* CTA Section */}
+          <div className="mb-12">
+            <Link to="/free-consultation">
+              <Button className="bg-law-gold hover:bg-law-gold-dark text-white px-8 md:px-10 py-4 md:py-6 text-base md:text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                GET A FREE CASE EVALUATION
+              </Button>
+            </Link>
           </div>
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <button 
+          onClick={scrollToNextSection}
+          className="text-white/70 hover:text-white transition-colors duration-300 group"
+        >
+          <div className="flex flex-col items-center space-y-2">
+            <span className="text-xs font-medium tracking-wider">SCROLL</span>
+            <ChevronDown className="w-6 h-6 animate-bounce group-hover:animate-none transition-all duration-300" />
+          </div>
+        </button>
       </div>
     </section>
   );

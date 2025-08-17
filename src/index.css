@@ -114,3 +114,167 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Google Translate Widget Styling */
+#google_translate_element {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: white !important;
+  transition: color 0.3s ease !important;
+  line-height: 1 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
+
+#google_translate_element:hover {
+  color: #d4af37 !important;
+}
+
+#google_translate_element select {
+  background: transparent !important;
+  color: white !important;
+  border: none !important;
+  outline: none !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  line-height: 1 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  box-sizing: content-box !important;
+}
+
+#google_translate_element select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#google_translate_element select option {
+  background: #1a1a1a !important;
+  color: white !important;
+  padding: 8px !important;
+}
+
+#google_translate_element .goog-te-gadget {
+  color: white !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  display: inline-block !important;
+}
+
+#google_translate_element .goog-te-gadget .goog-te-combo {
+  background: transparent !important;
+  color: white !important;
+  border: none !important;
+  outline: none !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  line-height: 1 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  box-sizing: content-box !important;
+}
+
+/* Make the dropdown arrow visible */
+#google_translate_element .goog-te-gadget .goog-te-combo::after {
+  content: "▼" !important;
+  color: white !important;
+  font-size: 10px !important;
+  margin-left: 4px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+#google_translate_element .goog-te-gadget .goog-te-combo:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#google_translate_element .goog-te-gadget .goog-te-combo option {
+  background: #1a1a1a !important;
+  color: white !important;
+  padding: 8px !important;
+}
+
+/* Hide Google Translate branding */
+#google_translate_element .goog-te-banner-frame {
+  display: none !important;
+}
+
+#google_translate_element .goog-te-menu-value {
+  color: white !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
+
+#google_translate_element .goog-te-menu-value:hover {
+  color: #d4af37 !important;
+}
+
+/* Remove any Google Translate styling that creates boxes */
+#google_translate_element * {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  line-height: 1 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
+
+/* Override any Google Translate default styling */
+.goog-te-gadget {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
+
+.goog-te-combo {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
