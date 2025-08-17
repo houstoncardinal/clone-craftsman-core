@@ -31,7 +31,7 @@ const About = () => {
       {/* Main Content */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
                 Experienced Legal Representation You Can Trust
@@ -55,9 +55,9 @@ const About = () => {
                 </Link>
               </div>
             </div>
-            <div className="bg-gray-50 p-8">
+            <div className="bg-gray-50 p-6 lg:p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-black mb-6">Why Choose SVR Law Firm?</h3>
-              <div className="space-y-6">
+              <div className="space-y-4 lg:space-y-6">
                 <div className="flex items-start space-x-4">
                   <Award className="w-6 h-6 text-law-gold mt-1 flex-shrink-0" />
                   <div>
@@ -104,21 +104,21 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Attorney Image */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="relative w-96 h-[500px] mx-auto mb-8">
+            <div className="flex justify-center lg:justify-start order-2 lg:order-1">
+              <div className="relative w-full max-w-sm lg:max-w-md h-[400px] lg:h-[500px] mx-auto mb-8 lg:mb-0">
                 <img 
                   src="/sanah.jpg" 
                   alt="Sanah Roopani"
-                  className="w-full h-full object-cover shadow-2xl"
+                  className="w-full h-full object-cover shadow-2xl rounded-lg"
                 />
-                <div className="absolute inset-0 border-4 border-law-gold opacity-20"></div>
+                <div className="absolute inset-0 border-4 border-law-gold opacity-20 rounded-lg"></div>
               </div>
             </div>
             
             {/* Attorney Bio */}
-            <div className="-ml-24">
+            <div className="order-1 lg:order-2 lg:-ml-24">
               <h3 className="text-2xl font-bold text-black mb-2">
                 Sanah Roopani
               </h3>
@@ -133,19 +133,25 @@ const About = () => {
               </p>
               
               {/* Key Experience Highlights */}
-              <div className="grid md:grid-cols-3 gap-6 mt-8">
-                <div className="text-center">
-                  <GraduationCap className="w-8 h-8 text-law-gold mx-auto mb-2" />
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8">
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="flex justify-center mb-2">
+                    <GraduationCap className="w-8 h-8 text-law-gold" />
+                  </div>
                   <h4 className="font-semibold text-black mb-1">Education</h4>
                   <p className="text-sm text-gray-600">University of Texas & UH Law Center</p>
                 </div>
-                <div className="text-center">
-                  <Gavel className="w-8 h-8 text-law-gold mx-auto mb-2" />
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="flex justify-center mb-2">
+                    <Gavel className="w-8 h-8 text-law-gold" />
+                  </div>
                   <h4 className="font-semibold text-black mb-1">Courtroom Experience</h4>
                   <p className="text-sm text-gray-600">250+ Cases as Prosecutor</p>
                 </div>
-                <div className="text-center">
-                  <BookOpen className="w-8 h-8 text-law-gold mx-auto mb-2" />
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="flex justify-center mb-2">
+                    <BookOpen className="w-8 h-8 text-law-gold" />
+                  </div>
                   <h4 className="font-semibold text-black mb-1">Specializations</h4>
                   <p className="text-sm text-gray-600">Personal Injury & Criminal Defense</p>
                 </div>
