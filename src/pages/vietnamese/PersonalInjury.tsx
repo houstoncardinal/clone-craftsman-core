@@ -186,13 +186,15 @@ const VietnamesePersonalInjury = () => {
 
             {/* Right Content - Call to Action */}
             <div className="flex justify-center lg:justify-end">
-              <Button 
-                size="lg"
-                className="bg-law-gold hover:bg-law-gold-dark text-white px-10 py-8 text-xl font-bold text-center leading-tight shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                Yêu cầu xem xét<br />
-                vụ án miễn phí
-              </Button>
+              <Link to="/vietnamese/len-lich-tu-van-mien-phi">
+                <Button 
+                  size="lg"
+                  className="bg-law-gold hover:bg-law-gold-dark text-white px-10 py-8 text-xl font-bold text-center leading-tight shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  Yêu cầu xem xét<br />
+                  vụ án miễn phí
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
