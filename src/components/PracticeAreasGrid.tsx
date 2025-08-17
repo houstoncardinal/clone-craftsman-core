@@ -1,5 +1,11 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import wrongfulDeathImage from "@/assets/wrongful-death.jpg";
+import carAccidentsImage from "@/assets/car-accidents.jpg";
+import truckAccidentsImage from "@/assets/truck-accidents.jpg";
+import slipFallImage from "@/assets/slip-fall.jpg";
+import dwiDuiImage from "@/assets/dwi-dui.jpg";
+import domesticViolenceImage from "@/assets/domestic-violence.jpg";
 
 const PracticeAreasGrid = () => {
   const [hoveredService, setHoveredService] = useState<string | null>("Car Accidents"); // Set default
@@ -9,74 +15,74 @@ const PracticeAreasGrid = () => {
   const practiceAreas = isVietnamese ? [
     {
       name: "Tử vong do sai sót",
-      image: "/practice-areas-wrongful-death.jpg", // High-quality professional image
+      image: wrongfulDeathImage,
       description: "Tìm kiếm công lý cho gia đình",
       link: "/vietnamese/linh-vuc-thuc-hanh/tu-vong-do-sai-sot"
     },
     {
       name: "Tai Nạn Xe Hơi",
-      image: "/practice-areas-car-accidents.jpg", // High-quality professional image
+      image: carAccidentsImage,
       description: "Bảo vệ quyền lợi của bạn",
       link: "/vietnamese/linh-vuc-thuc-hanh/tai-nan-xe-hoi"
     },
     {
       name: "Tai nạn xe tải 18 bánh",
-      image: "/practice-areas-truck-accidents.jpg", // High-quality professional image
+      image: "/18wheeler.jpg",
       description: "Vụ án tai nạn xe tải phức tạp",
       link: "/vietnamese/linh-vuc-thuc-hanh/tai-nan-xe-tai"
     },
     {
       name: "Trượt Ngã",
-      image: "/practice-areas-slip-fall.jpg", // High-quality professional image
+      image: slipFallImage,
       description: "Khiếu nại trách nhiệm cơ sở",
       link: "/vietnamese/linh-vuc-thuc-hanh/truot-nga"
     },
     {
       name: "Lái xe trong tình trạng say rượu",
-      image: "/practice-areas-dwi-dui.jpg", // High-quality professional image
+      image: dwiDuiImage,
       description: "Chuyên môn bào chữa hình sự",
       link: "/vietnamese/linh-vuc-thuc-hanh/lai-xe-say-ruou"
     },
     {
       name: "Bạo lực gia đình",
-      image: "/practice-areas-domestic-violence.jpg", // High-quality professional image
+      image: domesticViolenceImage,
       description: "Bảo vệ tương lai của bạn",
       link: "/vietnamese/linh-vuc-thuc-hanh/bao-luc-gia-dinh"
     }
   ] : [
     {
       name: "Wrongful Death",
-      image: "/practice-areas-wrongful-death.jpg", // High-quality professional image
+      image: wrongfulDeathImage,
       description: "Seeking justice for families",
       link: "/practice-areas/wrongful-death"
     },
     {
       name: "Car Accidents",
-      image: "/practice-areas-car-accidents.jpg", // High-quality professional image
+      image: carAccidentsImage,
       description: "Protecting your rights",
       link: "/practice-areas/car-accidents"
     },
     {
       name: "18-Wheeler Accidents",
-      image: "/practice-areas-truck-accidents.jpg", // High-quality professional image
+      image: "/18wheeler.jpg",
       description: "Complex truck accident cases",
       link: "/practice-areas/truck-accidents"
     },
     {
       name: "Slip and Fall",
-      image: "/practice-areas-slip-fall.jpg", // High-quality professional image
+      image: slipFallImage,
       description: "Premises liability claims",
       link: "/practice-areas/slip-fall"
     },
     {
       name: "DWI/DUI",
-      image: "/practice-areas-dwi-dui.jpg", // High-quality professional image
+      image: dwiDuiImage,
       description: "Criminal defense expertise",
       link: "/practice-areas/dwi-dui"
     },
     {
       name: "Domestic Violence",
-      image: "/practice-areas-domestic-violence.jpg", // High-quality professional image
+      image: domesticViolenceImage,
       description: "Protecting your future",
       link: "/practice-areas/domestic-violence"
     }

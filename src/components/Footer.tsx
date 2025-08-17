@@ -12,7 +12,7 @@ const Footer = () => {
               <img 
                 src="/svr.jpeg" 
                 alt="SVR LAW" 
-                className="w-16 h-16 rounded-full object-cover"
+                className="w-[150px] h-[150px] object-contain"
               />
             </div>
             <h4 className="font-semibold mb-4 text-white">Working Hours</h4>

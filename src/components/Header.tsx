@@ -171,13 +171,13 @@ const Header = () => {
     <header className="bg-black">
       <div className="container mx-auto px-4">
         {/* Main navigation */}
-        <div className="flex justify-between items-center py-4 md:py-6">
+        <div className="flex justify-between items-center py-1 md:py-6">
           {/* Logo */}
           <Link to={isVietnamese ? "/vietnamese" : "/"} className="flex items-center">
             <img 
               src="/svr.jpeg" 
               alt="SVR LAW" 
-              className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover"
+              className="w-24 h-24 md:w-28 md:h-28 object-contain"
             />
           </Link>
           

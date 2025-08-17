@@ -4,12 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ArrowRight, Shield, Scale, Users, Heart, Car, Truck, User, Dog } from "lucide-react";
-import wrongfulDeathImg from "@/assets/wrongful-death.jpg";
-import carAccidentsImg from "@/assets/car-accidents.jpg";
-import truckAccidentsImg from "@/assets/truck-accidents.jpg";
-import slipFallImg from "@/assets/slip-fall.jpg";
-import dwiDuiImg from "@/assets/dwi-dui.jpg";
-import domesticViolenceImg from "@/assets/domestic-violence.jpg";
 
 const PracticeAreas = () => {
   const [hoveredPersonalInjury, setHoveredPersonalInjury] = useState<string | null>("Car Accidents");
@@ -18,42 +12,42 @@ const PracticeAreas = () => {
   const personalInjuryAreas = [
     {
       name: "Car Accidents",
-      image: carAccidentsImg,
+      image: "/practice-areas-car-accidents.jpg",
       description: "Protecting your rights",
       link: "/practice-areas/car-accidents",
       icon: Car
     },
     {
       name: "18-Wheeler Accidents",
-      image: truckAccidentsImg,
+      image: "/practice-areas-truck-accidents.jpg",
       description: "Complex truck accident cases",
       link: "/practice-areas/truck-accidents",
       icon: Truck
     },
     {
       name: "Slip and Fall",
-      image: slipFallImg,
+      image: "/practice-areas-slip-fall.jpg",
       description: "Premises liability claims",
       link: "/practice-areas/slip-fall",
       icon: User
     },
     {
       name: "Wrongful Death",
-      image: wrongfulDeathImg,
+      image: "/practice-areas-wrongful-death.jpg",
       description: "Seeking justice for families",
       link: "/practice-areas/wrongful-death",
       icon: Heart
     },
     {
       name: "Catastrophic Injury",
-      image: carAccidentsImg,
+      image: "/practice-areas-catastrophic-injury.jpg",
       description: "Fighting for severe injury victims",
       link: "/practice-areas/catastrophic-injury",
       icon: Shield
     },
     {
       name: "Dog Bites",
-      image: slipFallImg,
+      image: "/practice-areas-dog-bites.jpg",
       description: "Representing dog attack victims",
       link: "/practice-areas/dog-bites",
       icon: Dog
@@ -63,49 +57,49 @@ const PracticeAreas = () => {
   const criminalDefenseAreas = [
     {
       name: "DWI/DUI",
-      image: dwiDuiImg,
+      image: "/practice-areas-dwi-dui.jpg",
       description: "Criminal defense expertise",
       link: "/practice-areas/dwi-dui",
       icon: Car
     },
     {
       name: "Drug Possession",
-      image: dwiDuiImg,
+      image: "/practice-areas-drug-possession.jpg",
       description: "Strategic defense strategies",
       link: "/practice-areas/drug-possession",
       icon: Shield
     },
     {
       name: "Weapon Cases",
-      image: domesticViolenceImg,
+      image: "/practice-areas-weapon-cases.jpg",
       description: "Defending weapon possession charges",
       link: "/practice-areas/weapon-cases",
       icon: Shield
     },
     {
       name: "Theft & Robbery",
-      image: domesticViolenceImg,
+      image: "/practice-areas-theft-robbery.jpg",
       description: "Protecting rights in property crimes",
       link: "/practice-areas/theft-robbery",
       icon: Shield
     },
     {
       name: "Domestic Violence",
-      image: domesticViolenceImg,
+      image: "/practice-areas-domestic-violence.jpg",
       description: "Protecting your future",
       link: "/practice-areas/domestic-violence",
       icon: Heart
     },
     {
       name: "Assault",
-      image: domesticViolenceImg,
+      image: "/practice-areas-assault.jpg",
       description: "Defending your rights",
       link: "/practice-areas/assault",
       icon: Shield
     },
     {
       name: "Non-Disclosure & Expunctions",
-      image: dwiDuiImg,
+      image: "/practice-areas-non-disclosure-expunctions.jpg",
       description: "Clearing criminal records",
       link: "/practice-areas/non-disclosure-expunctions",
       icon: Scale

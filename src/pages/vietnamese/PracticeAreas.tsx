@@ -4,12 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ArrowRight, Shield, Scale, Users, Heart, Car, Truck, User, Dog } from "lucide-react";
-import wrongfulDeathImg from "@/assets/wrongful-death.jpg";
-import carAccidentsImg from "@/assets/car-accidents.jpg";
-import truckAccidentsImg from "@/assets/truck-accidents.jpg";
-import slipFallImg from "@/assets/slip-fall.jpg";
-import dwiDuiImg from "@/assets/dwi-dui.jpg";
-import domesticViolenceImg from "@/assets/domestic-violence.jpg";
 
 const VietnamesePracticeAreas = () => {
   const [hoveredPersonalInjury, setHoveredPersonalInjury] = useState<string | null>("Tai Nạn Xe Hơi");
@@ -18,42 +12,42 @@ const VietnamesePracticeAreas = () => {
   const personalInjuryAreas = [
     {
       name: "Tai Nạn Xe Hơi",
-      image: carAccidentsImg,
+      image: "/practice-areas-car-accidents.jpg",
       description: "Bảo vệ quyền lợi của bạn",
       link: "/vietnamese/linh-vuc-thuc-hanh/tai-nan-xe-hoi",
       icon: Car
     },
     {
       name: "Tai nạn xe tải 18 bánh",
-      image: truckAccidentsImg,
+      image: "/practice-areas-truck-accidents.jpg",
       description: "Vụ án tai nạn xe tải phức tạp",
       link: "/vietnamese/linh-vuc-thuc-hanh/tai-nan-xe-tai",
       icon: Truck
     },
     {
       name: "Trượt Ngã",
-      image: slipFallImg,
+      image: "/practice-areas-slip-fall.jpg",
       description: "Khiếu nại trách nhiệm cơ sở",
       link: "/vietnamese/linh-vuc-thuc-hanh/truot-nga",
       icon: User
     },
     {
       name: "Tử vong do sai sót",
-      image: wrongfulDeathImg,
+      image: "/practice-areas-wrongful-death.jpg",
       description: "Tìm kiếm công lý cho gia đình",
       link: "/vietnamese/linh-vuc-thuc-hanh/tu-vong-do-sai-sot",
       icon: Heart
     },
     {
       name: "Chấn Thương Thảm Khốc",
-      image: carAccidentsImg,
+      image: "/practice-areas-catastrophic-injury.jpg",
       description: "Đấu tranh cho nạn nhân chấn thương nghiêm trọng",
       link: "/vietnamese/linh-vuc-thuc-hanh/chan-thuong-tham-khoc",
       icon: Shield
     },
     {
       name: "Cắn Chó",
-      image: slipFallImg,
+      image: "/practice-areas-dog-bites.jpg",
       description: "Đại diện cho nạn nhân bị chó cắn",
       link: "/vietnamese/linh-vuc-thuc-hanh/can-cho",
       icon: Dog
@@ -63,49 +57,49 @@ const VietnamesePracticeAreas = () => {
   const criminalDefenseAreas = [
     {
       name: "Lái xe trong tình trạng say rượu",
-      image: dwiDuiImg,
+      image: "/practice-areas-dwi-dui.jpg",
       description: "Chuyên môn bào chữa hình sự",
       link: "/vietnamese/linh-vuc-thuc-hanh/lai-xe-say-ruou",
       icon: Car
     },
     {
       name: "Sở hữu ma túy",
-      image: dwiDuiImg,
+      image: "/practice-areas-drug-possession.jpg",
       description: "Chiến lược bào chữa chiến lược",
       link: "/vietnamese/linh-vuc-thuc-hanh/so-huu-ma-tuy",
       icon: Shield
     },
     {
       name: "Cáo Buộc Về Vũ Khí",
-      image: domesticViolenceImg,
+      image: "/practice-areas-weapon-cases.jpg",
       description: "Bào chữa cáo buộc sở hữu vũ khí",
       link: "/vietnamese/linh-vuc-thuc-hanh/cao-buoc-vu-khi",
       icon: Shield
     },
     {
       name: "Trộm Cắp/Cướp Giật",
-      image: domesticViolenceImg,
+      image: "/practice-areas-theft-robbery.jpg",
       description: "Bảo vệ quyền lợi trong tội phạm tài sản",
       link: "/vietnamese/linh-vuc-thuc-hanh/trom-cap-cuop-giat",
       icon: Shield
     },
     {
       name: "Bạo lực gia đình",
-      image: domesticViolenceImg,
+      image: "/practice-areas-domestic-violence.jpg",
       description: "Bảo vệ tương lai của bạn",
       link: "/vietnamese/linh-vuc-thuc-hanh/bao-luc-gia-dinh",
       icon: Heart
     },
     {
       name: "Tấn công",
-      image: domesticViolenceImg,
+      image: "/practice-areas-assault.jpg",
       description: "Bảo vệ quyền lợi của bạn",
       link: "/vietnamese/linh-vuc-thuc-hanh/tan-cong",
       icon: Shield
     },
     {
       name: "Không Tiết Lộ/Xóa Bỏ",
-      image: dwiDuiImg,
+      image: "/practice-areas-non-disclosure-expunctions.jpg",
       description: "Xóa bỏ hồ sơ hình sự",
       link: "/vietnamese/linh-vuc-thuc-hanh/khong-tiet-lo-xoa-bo",
       icon: Scale
