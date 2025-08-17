@@ -100,11 +100,11 @@ const VietnameseCriminalDefense = () => {
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-law-gold mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-700">Các Luật Sư Bảo Vệ Hình Sự Có Kinh Nghiệm Tại Houston, Texas</p>
+                  <p className="text-gray-700">Luật Sư Bảo Vệ Hình Sự Có Kinh Nghiệm Tại Houston, Texas</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-law-gold mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-700">Các luật sư xét xử đáng tin cậy của bạn ở Texas</p>
+                  <p className="text-gray-700">Luật sư xét xử đáng tin cậy của bạn ở Texas</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-law-gold mt-2 flex-shrink-0"></div>

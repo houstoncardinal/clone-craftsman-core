@@ -23,7 +23,7 @@ export const SEOHead = ({
   noindex = false,
   language = "en"
 }: SEOHeadProps) => {
-  const fullTitle = title.includes("SVR Law Firm") ? title : `${title} | SVR Law Firm - Houston Attorneys`;
+  const fullTitle = title.includes("SVR Law Firm") ? title : `${title} | SVR Law Firm - Houston Attorney`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + "..." : description;
   
   return (
@@ -66,20 +66,20 @@ export const SEOHead = ({
 // Predefined SEO configurations for different page types
 export const SEOConfigs = {
   home: {
-    title: "SVR Law Firm - Houston Personal Injury & Criminal Defense Attorneys | Free Consultation",
+    title: "SVR Law Firm - Houston Personal Injury & Criminal Defense Attorney | Free Consultation",
     description: "SVR Law Firm in Houston, TX provides expert personal injury and criminal defense legal services. Car accidents, DWI, domestic violence, wrongful death. Free consultation. Call (281) 249-9835.",
     keywords: "Houston personal injury attorney, Houston criminal defense lawyer, car accident lawyer Houston, DWI attorney Houston, domestic violence lawyer, wrongful death attorney, slip and fall lawyer, truck accident attorney, Houston law firm, free legal consultation",
     canonical: "https://svrlawfirm.com"
   },
   about: {
-    title: "About SVR Law Firm - Experienced Houston Attorneys | Sanah Roopani",
+    title: "About SVR Law Firm - Experienced Houston Attorney | Sanah Roopani",
     description: "Meet Sanah Roopani, lead attorney at SVR Law Firm in Houston. 250+ cases as prosecutor. Expert personal injury and criminal defense representation. Free consultation.",
     keywords: "Sanah Roopani, Houston attorney, SVR Law Firm attorney, experienced lawyer Houston, personal injury attorney Houston, criminal defense lawyer Houston",
     canonical: "https://svrlawfirm.com/about"
   },
   contact: {
-    title: "Contact SVR Law Firm - Houston Personal Injury & Criminal Defense Attorneys",
-    description: "Contact SVR Law Firm in Houston for expert legal representation. Personal injury and criminal defense attorneys. Free consultation. Call (281) 249-9835 or visit our office.",
+    title: "Contact SVR Law Firm - Houston Personal Injury & Criminal Defense Attorney",
+    description: "Contact SVR Law Firm in Houston for expert legal representation. Personal injury and criminal defense attorney. Free consultation. Call (281) 249-9835 or visit our office.",
     keywords: "contact SVR Law Firm, Houston law firm contact, personal injury attorney contact, criminal defense lawyer contact, free consultation Houston",
     canonical: "https://svrlawfirm.com/contact"
   },
@@ -103,19 +103,19 @@ export const SEOConfigs = {
   },
   dwi: {
     title: "DWI Attorney Houston - SVR Law Firm | DUI Defense Lawyer",
-    description: "Expert DWI and DUI defense attorneys in Houston. Protect your license, freedom, and future. SVR Law Firm provides aggressive DWI defense. Free consultation.",
+    description: "Expert DWI and DUI defense attorney in Houston. Protect your license, freedom, and future. SVR Law Firm provides aggressive DWI defense. Free consultation.",
     keywords: "DWI attorney Houston, DUI lawyer Houston, drunk driving defense, DWI defense attorney, Houston DWI lawyer, DUI defense lawyer",
     canonical: "https://svrlawfirm.com/practice-areas/dwi-dui"
   },
   domesticViolence: {
     title: "Domestic Violence Lawyer Houston - SVR Law Firm | Family Violence Defense",
-    description: "Expert domestic violence defense attorneys in Houston. Protect your rights and future. SVR Law Firm provides aggressive defense for family violence charges. Free consultation.",
+    description: "Expert domestic violence defense attorney in Houston. Protect your rights and future. SVR Law Firm provides aggressive defense for family violence charges. Free consultation.",
     keywords: "domestic violence lawyer Houston, family violence attorney, domestic assault defense, Houston domestic violence attorney, family violence lawyer",
     canonical: "https://svrlawfirm.com/practice-areas/domestic-violence"
   },
   wrongfulDeath: {
     title: "Wrongful Death Attorney Houston - SVR Law Firm | Fatal Accident Lawyer",
-    description: "Compassionate wrongful death attorneys in Houston. SVR Law Firm helps families get justice and compensation for their loss. Free consultation. No fee unless we win.",
+    description: "Compassionate wrongful death attorney in Houston. SVR Law Firm helps families get justice and compensation for their loss. Free consultation. No fee unless we win.",
     keywords: "wrongful death attorney Houston, fatal accident lawyer, wrongful death lawyer, Houston wrongful death attorney, death compensation lawyer",
     canonical: "https://svrlawfirm.com/practice-areas/wrongful-death"
   },

@@ -81,7 +81,7 @@ export const LawFirmSchema = () => {
               "@type": "Person",
               "name": "John Smith"
             },
-            "reviewBody": "SVR Law Firm helped me get the compensation I deserved after my car accident. Professional and caring attorneys."
+            "reviewBody": "SVR Law Firm helped me get the compensation I deserved after my car accident. Professional and caring attorney."
           },
           {
             "@type": "Review",
@@ -94,7 +94,7 @@ export const LawFirmSchema = () => {
               "@type": "Person",
               "name": "Maria Garcia"
             },
-            "reviewBody": "Excellent criminal defense attorneys. They fought hard for my case and got the charges reduced."
+            "reviewBody": "Excellent criminal defense attorney. They fought hard for my case and got the charges reduced."
           }
         ]
       },
@@ -226,7 +226,7 @@ export const ContactPageSchema = () => {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact SVR Law Firm",
-    "description": "Contact SVR Law Firm in Houston for expert legal representation. Personal injury and criminal defense attorneys.",
+    "description": "Contact SVR Law Firm in Houston for expert legal representation. Personal injury and criminal defense attorney.",
     "url": "https://svrlawfirm.com/contact",
     "mainEntity": {
       "@type": "LegalService",

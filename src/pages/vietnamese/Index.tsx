@@ -281,7 +281,7 @@ const VietnameseIndex = () => {
             <div>
               <h3 className="text-3xl font-bold text-black mb-6">Gọi Văn phòng Luật SVR</h3>
               <p className="text-black mb-6 text-lg leading-relaxed">
-                Nếu bạn có câu hỏi hoặc lo ngại về vụ án của mình, vui lòng gọi cho chúng tôi trực tiếp. Các luật sư có kinh nghiệm của chúng tôi ở đây để giúp bạn hiểu các lựa chọn pháp lý của mình và cung cấp sự hướng dẫn mà bạn cần.
+                Nếu bạn có câu hỏi hoặc lo ngại về vụ án của mình, vui lòng gọi cho chúng tôi trực tiếp. Luật sư có kinh nghiệm của chúng tôi ở đây để giúp bạn hiểu các lựa chọn pháp lý của mình và cung cấp sự hướng dẫn mà bạn cần.
               </p>
               <a href="tel:281-249-9835">
                 <Button className="bg-law-gold hover:bg-law-gold-dark text-white px-8 py-4 text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">

@@ -256,7 +256,7 @@ const VietnamesePracticeAreas = () => {
       {/* Criminal Defense Law Section */}
       <PracticeAreaSection
         title="Luật Bào Chữa Hình Sự"
-        subtitle="Đại diện chiến lược để bảo vệ quyền lợi và tự do của bạn. Chúng tôi phát triển các chiến lược bào chữa mạnh mẽ cho tất cả các loại cáo buộc với các luật sư bào chữa hình sự có kinh nghiệm."
+        subtitle="Đại diện chiến lược để bảo vệ quyền lợi và tự do của bạn. Chúng tôi phát triển các chiến lược bào chữa mạnh mẽ cho tất cả các loại cáo buộc với luật sư bào chữa hình sự có kinh nghiệm."
         areas={criminalDefenseAreas}
         hoveredService={hoveredCriminalDefense}
         setHoveredService={setHoveredCriminalDefense}
