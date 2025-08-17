@@ -241,7 +241,7 @@ const VietnameseCriminalDefense = () => {
       <section className="py-16 bg-law-gold">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/vietnamese/free-consultation">
+            <Link to="/vietnamese/len-lich-tu-van-mien-phi">
               <Button className="bg-white text-law-gold hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-lg">
                 Nhận Đánh Giá Vụ Án Miễn Phí
               </Button>
