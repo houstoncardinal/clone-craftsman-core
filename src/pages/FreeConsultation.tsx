@@ -57,25 +57,31 @@ const FreeConsultation = () => {
               {/* Contact Form */}
               <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200">
                 <h3 className="text-2xl font-bold text-black mb-6">Request Your Free Consultation</h3>
-                <div className="space-y-4">
+                <form name="free-consultation" data-netlify="true" className="space-y-4">
+                  {/* Hidden form fields for Netlify */}
+                  <input type="hidden" name="form-name" value="free-consultation" />
+                  <input type="hidden" name="bot-field" />
                   <Input 
                     type="text" 
+                    name="name"
                     placeholder="Your Full Name"
                     className="w-full p-4 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent rounded-lg"
                   />
                   <Input 
                     type="tel" 
+                    name="phone"
                     placeholder="Your Phone Number"
                     className="w-full p-4 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent rounded-lg"
                   />
                   <Input 
                     type="email" 
+                    name="email"
                     placeholder="Your Email Address"
                     className="w-full p-4 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent rounded-lg"
                   />
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Practice Area</label>
-                    <select className="w-full p-4 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent rounded-lg">
+                    <select name="practiceArea" className="w-full p-4 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent rounded-lg">
                       <option value="">Select a practice area</option>
                       <option value="car-accidents">Car Accidents</option>
                       <option value="truck-accidents">Truck Accidents</option>
@@ -93,21 +99,22 @@ const FreeConsultation = () => {
                     </select>
                   </div>
                   <Textarea 
+                    name="message"
                     placeholder="Brief description of your case (optional)"
                     rows={4}
                     className="w-full p-4 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent rounded-lg"
                   />
                   <div className="flex items-center space-x-3">
-                    <input type="checkbox" id="agree" className="w-5 h-5 text-law-gold focus:ring-law-gold" />
+                    <input type="checkbox" name="agreeToTerms" id="agree" className="w-5 h-5 text-law-gold focus:ring-law-gold" />
                     <label htmlFor="agree" className="text-sm text-gray-600">
                       I agree for SVR Law Firm to contact me at the provided contact methods in my form submission.
                     </label>
                   </div>
-                  <Button className="w-full bg-law-gold hover:bg-law-gold-dark text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Button type="submit" className="w-full bg-law-gold hover:bg-law-gold-dark text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                     <Phone className="w-5 h-5 mr-2" />
                     Request Free Consultation
                   </Button>
-                </div>
+                </form>
               </div>
 
               {/* Contact Information */}

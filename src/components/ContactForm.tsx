@@ -120,7 +120,10 @@ export const ContactForm = ({ language = "en" }: ContactFormProps) => {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      <form name="contact" data-netlify="true" onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+        {/* Hidden form fields for Netlify */}
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
         {/* Name and Email - 2 Columns */}
         <div className="grid md:grid-cols-2 gap-4">
           <div>

@@ -53,25 +53,31 @@ const VietnameseFreeConsultation = () => {
               {/* Contact Form */}
               <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200">
                 <h3 className="text-2xl font-bold text-black mb-6">Yêu Cầu Tư Vấn Miễn Phí</h3>
-                <div className="space-y-4">
+                <form name="vietnamese-free-consultation" data-netlify="true" className="space-y-4">
+                  {/* Hidden form fields for Netlify */}
+                  <input type="hidden" name="form-name" value="vietnamese-free-consultation" />
+                  <input type="hidden" name="bot-field" />
                   <Input 
                     type="text" 
+                    name="name"
                     placeholder="Họ và tên của bạn"
                     className="w-full p-4 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent rounded-lg"
                   />
                   <Input 
                     type="tel" 
+                    name="phone"
                     placeholder="Số điện thoại của bạn"
                     className="w-full p-4 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent rounded-lg"
                   />
                   <Input 
                     type="email" 
+                    name="email"
                     placeholder="Địa chỉ email của bạn"
                     className="w-full p-4 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent rounded-lg"
                   />
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Lĩnh vực thực hành</label>
-                    <select className="w-full p-4 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent rounded-lg">
+                    <select name="practiceArea" className="w-full p-4 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent rounded-lg">
                       <option value="">Chọn lĩnh vực thực hành</option>
                       <option value="tai-nan-xe-hoi">Tai nạn xe hơi</option>
                       <option value="tai-nan-xe-tai">Tai nạn xe tải</option>
@@ -89,21 +95,22 @@ const VietnameseFreeConsultation = () => {
                     </select>
                   </div>
                   <Textarea 
+                    name="message"
                     placeholder="Mô tả ngắn gọn về vụ án của bạn (tùy chọn)"
                     rows={4}
                     className="w-full p-4 border border-gray-300 focus:ring-2 focus:ring-law-gold focus:border-transparent rounded-lg"
                   />
                   <div className="flex items-center space-x-3">
-                    <input type="checkbox" id="agree" className="w-5 h-5 text-law-gold focus:ring-law-gold" />
+                    <input type="checkbox" name="agreeToTerms" id="agree" className="w-5 h-5 text-law-gold focus:ring-law-gold" />
                     <label htmlFor="agree" className="text-sm text-gray-600">
                       Tôi đồng ý cho SVR Law Firm liên hệ với tôi qua các phương thức liên lạc đã cung cấp trong biểu mẫu này.
                     </label>
                   </div>
-                  <Button className="w-full bg-law-gold hover:bg-law-gold-dark text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Button type="submit" className="w-full bg-law-gold hover:bg-law-gold-dark text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                     <Phone className="w-5 h-5 mr-2" />
                     Yêu Cầu Tư Vấn Miễn Phí
                   </Button>
-                </div>
+                </form>
               </div>
 
               {/* Contact Information */}
