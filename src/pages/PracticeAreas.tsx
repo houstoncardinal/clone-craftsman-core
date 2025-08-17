@@ -167,6 +167,9 @@ const PracticeAreas = () => {
                   className="relative w-full h-56 bg-black/20 border-b border-gray-700 last:border-b-0 hover:bg-black/10 transition-all duration-500 cursor-pointer group"
                   onMouseEnter={() => setHoveredService(area.name)}
                   onMouseLeave={() => setHoveredService(defaultService)}
+                  onTouchStart={() => setHoveredService(area.name)}
+                  onTouchEnd={() => setHoveredService(defaultService)}
+                  onClick={() => setHoveredService(area.name)}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:from-black/50 transition-all duration-500" />
                   <div className="relative z-10 h-full flex flex-col justify-end p-6">
@@ -200,6 +203,9 @@ const PracticeAreas = () => {
                   className="relative flex-1 h-80 bg-black/20 border-r border-gray-700 last:border-r-0 hover:bg-black/10 transition-all duration-500 cursor-pointer group"
                   onMouseEnter={() => setHoveredService(area.name)}
                   onMouseLeave={() => setHoveredService(defaultService)}
+                  onTouchStart={() => setHoveredService(area.name)}
+                  onTouchEnd={() => setHoveredService(defaultService)}
+                  onClick={() => setHoveredService(area.name)}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:from-black/50 transition-all duration-500" />
                   <div className="relative z-10 h-full flex flex-col justify-end p-8">
