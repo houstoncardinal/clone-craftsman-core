@@ -77,9 +77,9 @@ const VietnamesePersonalInjury = () => {
                 Dưới sự dẫn dắt của Sanah Roopani, văn phòng của chúng tôi tận dụng kiến thức pháp lý sâu rộng và kinh nghiệm tại tòa án để cung cấp sự đại diện hiệu quả. Chúng tôi cố gắng đảm bảo rằng mỗi khách hàng đều nhận được sự chú ý cá nhân mà họ xứng đáng có được, hướng dẫn họ qua từng bước của quá trình pháp lý.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/vietnamese/about">
+                <Link to="/vietnamese/ve-chung-toi">
                   <Button className="bg-law-gold hover:bg-law-gold-dark text-white px-6 py-3 font-semibold">
-                    Giới thiệu về chúng tôi
+                    Về Chúng Tôi
                   </Button>
                 </Link>
                 <Link to="/vietnamese/linh-vuc-thuc-hanh">
