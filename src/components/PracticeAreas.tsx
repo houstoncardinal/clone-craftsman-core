@@ -48,17 +48,17 @@ const PracticeAreas = () => {
   return (
     <section className="py-16 bg-law-dark">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-6 gap-0">{/* Single row with 6 columns */}
           {practiceAreas.map((area, index) => (
-            <div key={index} className="relative overflow-hidden group cursor-pointer">
+            <div key={index} className="relative overflow-hidden group cursor-pointer border-r border-law-darker last:border-r-0">
               <div 
                 className="h-64 bg-cover bg-center relative"
                 style={{ backgroundImage: `url(${area.image})` }}
               >
-                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-all duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">{area.title}</h3>
-                  <p className="text-sm opacity-90">{area.subtitle}</p>
+                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-all duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <h3 className="text-lg font-bold mb-1">{area.title}</h3>
+                  <p className="text-xs opacity-90">{area.subtitle}</p>
                 </div>
               </div>
             </div>
