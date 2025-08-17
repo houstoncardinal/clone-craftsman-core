@@ -17,7 +17,7 @@ const SoHuuMaTuy = () => {
               Sở Hữu Ma Túy
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Luật Sư Sở Hữu Ma Túy tại Houston, Texas
+              Luật Sư Bào Chữa Tội Sở Hữu Ma Túy tại Houston, Texas
             </p>
           </div>
         </div>
