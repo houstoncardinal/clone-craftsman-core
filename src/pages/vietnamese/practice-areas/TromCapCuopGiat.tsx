@@ -17,7 +17,7 @@ const TromCapCuopGiat = () => {
               Trộm Cắp & Cướp Giật
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Luật Sư Trộm Cắp & Cướp Giật tại Houston, Texas
+              Luật Sư Bào Chữa Tội Trộm Cắp & Cướp Giật tại Houston, Texas
             </p>
           </div>
         </div>
