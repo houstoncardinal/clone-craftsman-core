@@ -10,7 +10,10 @@ const WrongfulDeath = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-b from-black to-gray-900">
+      <section 
+        className="relative py-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/practice-areas-wrongful-death.jpg')` }}
+      >
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

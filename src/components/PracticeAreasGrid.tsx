@@ -1,11 +1,5 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import wrongfulDeathImg from "@/assets/wrongful-death.jpg";
-import carAccidentsImg from "@/assets/car-accidents.jpg";
-import truckAccidentsImg from "@/assets/truck-accidents.jpg";
-import slipFallImg from "@/assets/slip-fall.jpg";
-import dwiDuiImg from "@/assets/dwi-dui.jpg";
-import domesticViolenceImg from "@/assets/domestic-violence.jpg";
 
 const PracticeAreasGrid = () => {
   const [hoveredService, setHoveredService] = useState<string | null>("Car Accidents"); // Set default
@@ -15,74 +9,74 @@ const PracticeAreasGrid = () => {
   const practiceAreas = isVietnamese ? [
     {
       name: "Tử vong do sai sót",
-      image: wrongfulDeathImg,
+      image: "/practice-areas-wrongful-death.jpg", // High-quality professional image
       description: "Tìm kiếm công lý cho gia đình",
       link: "/vietnamese/linh-vuc-thuc-hanh/tu-vong-do-sai-sot"
     },
     {
       name: "Tai Nạn Xe Hơi",
-      image: carAccidentsImg,
+      image: "/practice-areas-car-accidents.jpg", // High-quality professional image
       description: "Bảo vệ quyền lợi của bạn",
       link: "/vietnamese/linh-vuc-thuc-hanh/tai-nan-xe-hoi"
     },
     {
       name: "Tai nạn xe tải 18 bánh",
-      image: truckAccidentsImg,
+      image: "/practice-areas-truck-accidents.jpg", // High-quality professional image
       description: "Vụ án tai nạn xe tải phức tạp",
       link: "/vietnamese/linh-vuc-thuc-hanh/tai-nan-xe-tai"
     },
     {
       name: "Trượt Ngã",
-      image: slipFallImg,
+      image: "/practice-areas-slip-fall.jpg", // High-quality professional image
       description: "Khiếu nại trách nhiệm cơ sở",
       link: "/vietnamese/linh-vuc-thuc-hanh/truot-nga"
     },
     {
       name: "Lái xe trong tình trạng say rượu",
-      image: dwiDuiImg,
+      image: "/practice-areas-dwi-dui.jpg", // High-quality professional image
       description: "Chuyên môn bào chữa hình sự",
       link: "/vietnamese/linh-vuc-thuc-hanh/lai-xe-say-ruou"
     },
     {
       name: "Bạo lực gia đình",
-      image: domesticViolenceImg,
+      image: "/practice-areas-domestic-violence.jpg", // High-quality professional image
       description: "Bảo vệ tương lai của bạn",
       link: "/vietnamese/linh-vuc-thuc-hanh/bao-luc-gia-dinh"
     }
   ] : [
     {
       name: "Wrongful Death",
-      image: wrongfulDeathImg,
+      image: "/practice-areas-wrongful-death.jpg", // High-quality professional image
       description: "Seeking justice for families",
       link: "/practice-areas/wrongful-death"
     },
     {
       name: "Car Accidents",
-      image: carAccidentsImg,
+      image: "/practice-areas-car-accidents.jpg", // High-quality professional image
       description: "Protecting your rights",
       link: "/practice-areas/car-accidents"
     },
     {
       name: "18-Wheeler Accidents",
-      image: truckAccidentsImg,
+      image: "/practice-areas-truck-accidents.jpg", // High-quality professional image
       description: "Complex truck accident cases",
       link: "/practice-areas/truck-accidents"
     },
     {
       name: "Slip and Fall",
-      image: slipFallImg,
+      image: "/practice-areas-slip-fall.jpg", // High-quality professional image
       description: "Premises liability claims",
       link: "/practice-areas/slip-fall"
     },
     {
       name: "DWI/DUI",
-      image: dwiDuiImg,
+      image: "/practice-areas-dwi-dui.jpg", // High-quality professional image
       description: "Criminal defense expertise",
       link: "/practice-areas/dwi-dui"
     },
     {
       name: "Domestic Violence",
-      image: domesticViolenceImg,
+      image: "/practice-areas-domestic-violence.jpg", // High-quality professional image
       description: "Protecting your future",
       link: "/practice-areas/domestic-violence"
     }
@@ -96,7 +90,7 @@ const PracticeAreasGrid = () => {
       style={{ 
         backgroundImage: hoveredService 
           ? `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${practiceAreas.find(area => area.name === hoveredService)?.image})`
-          : `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${carAccidentsImg})`
+          : `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${practiceAreas.find(area => area.name === defaultService)?.image})`
       }}
     >
       {/* Mobile: Single column, full width, vertical stacking */}
