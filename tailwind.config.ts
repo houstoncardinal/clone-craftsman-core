@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Law Firm Brand Colors
+				'law-dark': 'hsl(var(--law-dark))',
+				'law-darker': 'hsl(var(--law-darker))',
+				'law-gold': 'hsl(var(--law-gold))',
+				'law-gold-light': 'hsl(var(--law-gold-light))',
+				'law-gold-dark': 'hsl(var(--law-gold-dark))',
+				'card-dark': 'hsl(var(--card-dark))',
+				'card-dark-foreground': 'hsl(var(--card-dark-foreground))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
