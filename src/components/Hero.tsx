@@ -36,12 +36,13 @@ const Hero = () => {
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight text-left tracking-tight">
-            You pay nothing until we <span className="text-law-gold">win for you.</span>
+            Proven Experts in<br />
+            <span className="text-law-gold">Personal Injury & Criminal Defense</span>
           </h1>
 
           {/* Description paragraph */}
           <p className="text-lg md:text-xl text-white mb-8 max-w-3xl leading-relaxed">
-            Experience peace of mind with our 'No Win, No Fee' guarantee. At SVR Law Firm we fight tirelessly for your rights, and you only pay if we secure the compensation you deserve. Contact us today for a risk-free case evaluation!
+            With years of trial experience and a commitment to achieving the best possible results, our firm has earned a reputation for excellence throughout Texas.
           </p>
 
           {/* CTA Section */}
