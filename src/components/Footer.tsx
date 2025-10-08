@@ -1,5 +1,6 @@
 import { Facebook, MapPin, Phone, Mail, Clock, Gavel, Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import CardinalConsultingCredit from "./CardinalConsultingCredit";
 
 const Footer = () => {
   return (
@@ -67,6 +68,7 @@ const Footer = () => {
           <p className="text-white">SVR Law Firm © 2024. All Rights Reserved.</p>
         </div>
       </div>
+      <CardinalConsultingCredit />
     </footer>
   );
 };
